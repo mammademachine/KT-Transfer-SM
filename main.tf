@@ -33,7 +33,7 @@ resource "aws_subnet" "tf_test_subnet" {
   depends_on = ["aws_internet_gateway.coolGw"]
 }
 
-resource "aws_eip" "bar" {
+resource "aws_eip" "coolEip" {
   vpc = true
   instance                  = "${aws_instance.coolInstnace.id}"
   associate_with_private_ip = "10.0.0.12"
